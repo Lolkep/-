@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакти КП «Комфортний Стрий» — адреса, телефони, форма зворотного зв'язку, аварійна служба.">
+  <title>Контакти — КП «Комфортний Стрий»</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🏠</div>
+        <span>Комфортний Стрий<small>Комунальне підприємство</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="index.html">Головна</a>
+        <a href="about.html">Про нас</a>
+        <a href="services.html">Послуги</a>
+        <a href="news.html">Новини</a>
+        <a href="contacts.html" class="active">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Контакти</h1>
+      <p class="breadcrumb"><a href="index.html">Головна</a> / Контакти</p>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT INFO ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Contact Details -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Адреса</h4>
+              <p>м. Стрий, вул. Примірна, 1<br>Львівська область, 82400</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Телефони</h4>
+              <p>Приймальня директора: (03245) 0-00-00<br>Абонентський відділ: (03245) 0-00-02<br>Бухгалтерія: (03245) 0-00-03</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <p>info@comfortny-stryi.gov.ua<br>abonent@comfortny-stryi.gov.ua</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Графік роботи</h4>
+              <p>Понеділок–Четвер: 8:00–17:00<br>П'ятниця: 8:00–16:00<br>Обідня перерва: 12:00–13:00<br>Вихідні: субота, неділя</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form" id="contactForm">
+          <h3 style="margin-bottom: 20px;">Зворотний зв'язок</h3>
+          <p style="margin-bottom: 20px; color: var(--text-light); font-size: 0.93rem;">Залиште повідомлення, і ми відповімо Вам найближчим часом.</p>
+
+          <div class="form-group">
+            <label for="name">Ваше ім'я *</label>
+            <input type="text" id="name" name="name" placeholder="Введіть Ваше ім'я" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+380 (__) ___-__-__">
+          </div>
+
+          <div class="form-group">
+            <label for="topic">Тема звернення</label>
+            <select id="topic" name="topic">
+              <option value="">Оберіть тему</option>
+              <option value="water">Водопостачання</option>
+              <option value="sewer">Водовідведення</option>
+              <option value="heat">Теплопостачання</option>
+              <option value="landscape">Благоустрій</option>
+              <option value="waste">Вивіз ТПВ</option>
+              <option value="tariff">Тарифи та нарахування</option>
+              <option value="emergency">Аварійна ситуація</option>
+              <option value="other">Інше</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Повідомлення *</label>
+            <textarea id="message" name="message" placeholder="Опишіть Ваше питання" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" onclick="handleFormSubmit(event)" style="width: 100%; justify-content: center;">Надіслати</button>
+
+          <div class="form-message" id="formMessage"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EMERGENCY SERVICE ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Аварійна служба</h2>
+      <p class="section-subtitle">У разі аварійної ситуації телефонуйте цілодобово</p>
+
+      <div style="max-width: 600px; margin: 0 auto;">
+        <div class="alert" style="border-left-color: #dc3545; background: #f8d7da;">
+          <span class="alert-icon">🚨</span>
+          <span><strong>Аварійна диспетчерська:</strong> (03245) 0-00-01 — цілодобово, без вихідних</span>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <h3 style="margin-bottom: 12px;">У яких випадках телефонувати:</h3>
+          <ul style="color: var(--text-light); line-height: 2; padding-left: 20px;">
+            <li>Прорив водопроводу або каналізації</li>
+            <li>Відсутність водопостачання (без попередження)</li>
+            <li>Пошкодження тепломережі</li>
+            <li>Затоплення підвалу</li>
+            <li>Інші аварійні ситуації, що загрожують життю чи майну</li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <h3 style="margin-bottom: 12px;">Що потрібно повідомити диспетчеру:</h3>
+          <ol style="color: var(--text-light); line-height: 2; padding-left: 20px;">
+            <li>Ваше прізвище, ім'я та контактний телефон</li>
+            <li>Точну адресу, де сталася аварія</li>
+            <li>Характер пошкодження (прорвало трубу, немає води тощо)</li>
+            <li>Час, коли Ви помітили проблему</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MAP ==================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Ми на мапі</h2>
+      <div class="map-container">
+        <span style="font-size: 4rem; margin-bottom: 16px;">🗺️</span>
+        <span>Інтерактивна мапа Google Maps</span>
+      </div>
+      <p style="text-align: center; margin-top: 12px; color: var(--text-light); font-size: 0.9rem;">
+        м. Стрий, вул. Примірна, 1, Львівська область
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>КП «Комфортний Стрий»</h4>
+          <p>Комунальне підприємство, що забезпечує комфортне проживання мешканців міста Стрий.</p>
+        </div>
+        <div>
+          <h4>Навігація</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="services.html">Послуги</a></li>
+            <li><a href="news.html">Новини</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Послуги</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#water">Водопостачання</a></li>
+            <li><a href="services.html#sewer">Водовідведення</a></li>
+            <li><a href="services.html#heat">Теплопостачання</a></li>
+            <li><a href="services.html#landscape">Благоустрій</a></li>
+            <li><a href="services.html#waste">Вивіз ТПВ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Контакти</h4>
+          <p>📞 (03245) 0-00-00</p>
+          <p>📧 info@comfortny-stryi.gov.ua</p>
+          <p>📍 м. Стрий, вул. Примірна, 1</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 КП «Комфортний Стрий». Усі права захищено.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Догори" title="Догори">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
